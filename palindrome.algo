@@ -1,0 +1,15 @@
+ALGORITHM compare_characters(string): // checking if 'kayak'is a palindrome
+var
+    left = 0        //starting from the index 0 which is k
+    right = len(string) - 1 //starting from the length of string which also start with k
+BEGIN
+    while left < right:             
+        if string[left] != string[right]: // if the string at index 0 is not equal to the string at the last index
+            return False  //not a palindrome
+        else:
+            if string[left] == string[right]: // if the string at index 0 is equal to the string at the last index
+                left += 1  // proceed with the next index at the left 
+                right -= 1   //proceed with the right index minus 1
+
+    return True  // it is a palindrome
+END
